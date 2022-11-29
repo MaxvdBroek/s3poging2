@@ -4,7 +4,7 @@
   <div class="card-img-overlay">
     <h5 class="card-title text">WELKOM BIJ</h5>
     <h1 class="text size">The Forest wiki</h1>
-    <p class="card-text test">het meest verkrachte kut forum wat je op het gehele internet gaat vinden</p>
+    <p class="card-text test">het meest verkrachte forum wat je op het gehele internet gaat vinden</p>
   </div>
 </div>
 
