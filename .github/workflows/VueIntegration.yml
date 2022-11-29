@@ -1,0 +1,26 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Vue Continuous Integration
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  pull_request_test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { dir: ['./forestforum'] }
+    steps:
+      - name: Get code in VM
+        uses: actions/checkout@v2
+      - name: Test project
+        working-directory: ${{ matrix.dir }}
+        run: |
+              npm install
+              npm run serve
+              npm run test:unit
