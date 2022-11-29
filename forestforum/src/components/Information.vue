@@ -1,14 +1,21 @@
-<script setup>
-import { useRoute } from 'vue-router';
-import { useFetch } from '@/assets/javascript/fetchData';
-import axios from 'axios';
-import API from '@/assets/javascript/API';
-import { ref } from 'vue';
+<script setup >
+import { useRoute } from 'vue-router'
 
+import API from '@/assets/javascript/API.js'
+import { ref } from 'vue';
 const route = useRoute();
 const page = ref();
  API().get('Page/id?id=' + route.params.id).then(result => page.value = result);
 console.log(page)
+
+defineProps({
+    Title: {
+      type: String,
+      required: true,
+      default: "Lorem",
+    }
+})
+
 </script>
 
 <template>
