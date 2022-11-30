@@ -29,6 +29,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./forestforum
-          file: forestforum/Dockerfile
+          file: forestforum/DOCKERFILE
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/forestforum:forestfrontend
