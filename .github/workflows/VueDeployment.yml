@@ -31,4 +31,4 @@ jobs:
           context: ./forestforum
           file: forestforum/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/forestForum:forestfrontend
+          tags: ${{ secrets.DOCKER_USERNAME }}/forestforum:forestfrontend
