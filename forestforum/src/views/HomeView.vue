@@ -8,7 +8,7 @@ import {CounterHub} from '../assets/javascript/signalr'
 <template>
   <information/>
   <axiostest/>
-  <h4>Current users:{{counter}}</h4>
+  <h4 v-if="(counter >= 1)">Current users:{{counter}}</h4>
 </template>
 
 <script>

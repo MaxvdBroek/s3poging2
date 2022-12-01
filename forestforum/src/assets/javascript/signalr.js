@@ -5,7 +5,7 @@ let connection;
 export class CounterHub {
     constructor(){
         console.log("in hub")
-        this.connection = new HubConnectionBuilder().withUrl("https://localhost:44376/counter").build();
+        this.connection = new HubConnectionBuilder().withUrl("https://localhost:7233/counter").build();
         this.connection.onclose(async() =>{
             await this.connect();
         })
