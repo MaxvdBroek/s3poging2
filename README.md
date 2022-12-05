@@ -4,9 +4,9 @@ dotnet new sln
 
 dotnet sln add ./ForestAPI.csproj
 
-dotnet sln add ./Back-end-API/UnitTests.csproj
 
-Add new sln via cmd in ForestSignalR\Back-end-API
+
+Add new sln via cmd in ForestSignalR\ForestSignalR
 
 dotnet new sln
 
