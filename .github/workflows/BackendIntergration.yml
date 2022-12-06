@@ -1,4 +1,4 @@
-name: Backend Integration
+name: API Integration
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Test .net projects
         working-directory: ${{ matrix.dir }}
-        run:  dotnet build --configuration Release
-      - name: unittests    
-        run:     dotnet test --no-restore --verbosity normal
+        run: | 
+              dotnet build --configuration Release
+              dotnet test --configuration Release
               
