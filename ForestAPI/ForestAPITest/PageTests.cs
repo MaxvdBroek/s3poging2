@@ -40,7 +40,7 @@ namespace ForestAPITests
                 new Page
                 {
                     PageID = 1,
-                    Title = "stick",
+                    Title = "stok",
                     Information = "you can hit someone with it",
                     CategoryID = 1,
                     LastUpdated = DateTime.Now
