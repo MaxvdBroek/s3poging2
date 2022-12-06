@@ -21,4 +21,5 @@ jobs:
         working-directory: ${{ matrix.dir }}
         run: | 
               dotnet build --configuration Release
+              dotnet test --configuration Release
               
