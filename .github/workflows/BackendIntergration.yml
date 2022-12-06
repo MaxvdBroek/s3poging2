@@ -21,5 +21,5 @@ jobs:
         working-directory: ${{ matrix.dir }}
         run:  dotnet build --configuration Release
       - name: unittests    
-              dotnet test --no-restore --verbosity normal
+        run:     dotnet test --no-restore --verbosity normal
               
