@@ -11,7 +11,7 @@ jobs:
   unit_test:
     runs-on: ubuntu-latest
     strategy:
-      matrix: { dir: ['./ForestAPI'] }
+      matrix: { dir: ['./ForestSignalR'] }
 
     steps:
       - name: Checkout code
@@ -20,6 +20,5 @@ jobs:
       - name: Test .net projects
         working-directory: ${{ matrix.dir }}
         run:  dotnet build --configuration Release
-      - name: unittests    
-        run:     dotnet test --no-restore --verbosity normal
+
               
