@@ -19,7 +19,7 @@ jobs:
 
       - name: Test .net projects
         working-directory: ${{ matrix.dir }}
-        run: | 
-              dotnet build --configuration Release
+        run:  dotnet build --configuration Release
+      - name: unittests    
               dotnet test --no-restore --verbosity normal
               
