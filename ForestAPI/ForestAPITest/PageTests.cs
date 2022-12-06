@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ForestAPI.DTO_s;
 
 namespace ForestAPITests
 {
@@ -136,6 +137,31 @@ namespace ForestAPITests
             Assert.NotNull(result);
             Assert.Equal(404, result.StatusCode);
         }
+
+
+        [Fact]
+        public async void CreatePage_Good()
+        {
+            //arrange
+            PageDTO newPage = new PageDTO
+            {
+                PageID = 5,
+                Title = "leaf",
+                Information = "falls of a tree",
+                CategoryID = 1
+            };
+            //act
+            var response = await controller.CreatePage(newPage);
+            var result = (ObjectResult)response;
+
+            //assert
+            Assert.NotNull(result);
+            Assert.Equal(201, result.StatusCode);
+
+        }
+        
+        
+
 
     }
 
