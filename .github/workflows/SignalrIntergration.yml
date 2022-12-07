@@ -20,5 +20,3 @@ jobs:
       - name: Test .net projects
         working-directory: ${{ matrix.dir }}
         run:  dotnet build --configuration Release
-
-              
