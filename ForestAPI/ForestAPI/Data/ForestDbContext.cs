@@ -11,5 +11,7 @@ namespace ForestAPI.Data
         }
         public DbSet<Page> Pages { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }
